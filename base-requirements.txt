@@ -23,4 +23,5 @@ python-memcached==1.48
 django-ses==0.4.1
 django-analytical==0.15.0
 mock==1.0.1
+psycopg2==2.5.1
 

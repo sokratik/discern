@@ -1,0 +1,11 @@
+- model: sites.site
+  pk: 1
+  fields:
+    domain: discern.sokratilk.com
+    name: Discern-sokratik
+
+- model: sites.site
+  pk: 2
+  fields:
+    domain: sokratik.com
+    name: sokratik

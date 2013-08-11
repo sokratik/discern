@@ -14,7 +14,6 @@ redis-server
 python-pip
 ipython
 nginx
-libmysqlclient-dev
 libblas3gf
 libblas-dev
 liblapack3gf

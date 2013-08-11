@@ -362,3 +362,5 @@ ACCOUNT_PASSWORD_MIN_LENGTH = 3 #For testing, set password minimum low.
 
 #Django email backend for local testing
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#fixtures dir
+FIXTURE_DIRS = [ ENV_ROOT / "fixtures" ]
