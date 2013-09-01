@@ -9,8 +9,8 @@ from settings import *
 import json
 from os.path import expanduser
 
-HOME_FOLDER = path(expanduser("~"))
-CONFIG_ROOT = HOME_FOLDER / "sokratik-infra/json-configs"
+EBS_ROOT = path("/local")
+CONFIG_ROOT = path("/local/sokratik-infra/json-configs")
 # specified as an environment variable.  Typically this is set
 # in the service's upstart script and corresponds exactly to the service name.
 # Service variants apply config differences via env and auth JSON files,
@@ -63,7 +63,7 @@ with open(CONFIG_ROOT / CONFIG_PREFIX + "auth.json") as auth_file:
     AUTH_TOKENS = json.load(auth_file)
 
 DATABASES = AUTH_TOKENS.get('DATABASES', DATABASES)
-ML_MODEL_PATH = os.path.join(HOME_FOLDER, ENV_TOKENS.get('ML_MODEL_PATH'))
+ML_MODEL_PATH = os.path.join(EBS_ROOT, ENV_TOKENS.get('ML_MODEL_PATH'))
 
 AWS_ACCESS_KEY_ID = AUTH_TOKENS.get('AWS_ACCESS_KEY_ID', AWS_ACCESS_KEY_ID)
 AWS_SECRET_ACCESS_KEY = AUTH_TOKENS.get('AWS_SECRET_ACCESS_KEY', AWS_SECRET_ACCESS_KEY)
