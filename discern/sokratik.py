@@ -10,7 +10,7 @@ import json
 from os.path import expanduser
 
 HOME_FOLDER = path(expanduser("~"))
-CONFIG_ROOT = HOME_FOLDER / "sokratik-infra/json-configs"
+CONFIG_ROOT = path("/local/config")
 # specified as an environment variable.  Typically this is set
 # in the service's upstart script and corresponds exactly to the service name.
 # Service variants apply config differences via env and auth JSON files,

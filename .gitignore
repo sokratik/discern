@@ -1,7 +1,9 @@
 .idea/
+*.iml
 __pycache__/
 *.pyc
 *~
+*.pid
 tests/
 test_data/
 _build/

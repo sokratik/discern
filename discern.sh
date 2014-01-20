@@ -6,9 +6,9 @@ PID_FILE=discern.pid
 case "$1" in 
 	start) 
 		# fire up the discern server 
-		python manage.py runserver 127.0.0.1:7999 --nostatic --settings=discern.settings --pythonpath=. &
+		python manage.py runserver 127.0.0.1:7999 --nostatic --settings=discern.sokratik --pythonpath=. &
 		# launch the message queue via celeryd 
-		python manage.py celeryd -B --settings=discern.settings --pythonpath=.  --loglevel=debug --logfile=/tmp/celery$$.out &
+		python manage.py celeryd -B --settings=discern.sokratik --pythonpath=.  --loglevel=debug --logfile=/tmp/celery$$.out &
 		echo "-$$" > ${PID_FILE}
 		;;
 	stop) 
